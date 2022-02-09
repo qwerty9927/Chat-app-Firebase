@@ -1,0 +1,199 @@
+.item {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.item:hover {
+    background-color: #EAF3FE;
+}
+
+.side-bar {
+    flex: 1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius   : 10px;
+    box-shadow: 4px 0 5px -2px rgba(0,0,0,.2);
+}
+.private-box {
+    border-bottom: 1px solid #ccc;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.private-box .content-box {
+    display: flex;
+    align-items: center;
+}
+.private-box .mail-box {
+    padding: 10px 11px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+    cursor: pointer;
+    position: relative;
+}
+.private-box .mail-box:hover{
+    background-color: #EAF3FE;
+}
+.mail-box:hover .pesudo-div {
+    visibility: visible;
+    opacity: 1;
+}
+.mail-box .pesudo-div {
+    position: absolute;
+    padding-top: 10px;
+    bottom: 0;
+    right: -10px;
+    transform: translateY(100%);
+    width: 280px;
+    opacity: 0;
+    transition: visibility .2s, opacity .2s;
+    visibility: hidden;
+    z-index: 9;
+}
+.mail-box .container-mail {
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 450px;
+    overflow-y: auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,.1);
+}
+.pesudo-div::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    right: 19px;
+    top: 4px;
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+
+.main-item-of-mail-box .displayName {
+    font-size: 12px;
+}
+.content-resquest .message-resquest {
+    font-size: 10px;
+    opacity: .5;
+}
+.main-item-of-mail-box .avatar {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+.resquest .main-item-of-mail-box {
+    justify-content: space-between;
+}
+.left-mail-item {
+    display: flex;
+    align-items: center;
+}
+.right-mail-item .btn-of-resquest .refuse,
+.right-mail-item .btn-of-resquest .confirm {
+    padding: 6px 5px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,.1);
+    border-radius: 50%;
+    background-color: #fff;
+    border: 0px;
+    margin: 5px;
+}
+.right-mail-item .btn-of-resquest .refuse:hover,
+.right-mail-item .btn-of-resquest .confirm:hover {
+    background-color: #EAF3FE;
+}
+
+.search-box {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.search-box input {
+    padding: 10px;
+    height: 35px;
+    width: 240px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: #f0f2f5;
+}
+.search-box .drop-box {
+    position: absolute;
+    background-color: #fff;
+    width: 270px;
+    top: 0;
+    transform: translateY(50px);
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+    font-size: 14px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+}
+.search-box input:focus + .drop-box {
+    display: block;
+}
+.search-box .drop-box:active {
+    display: block;
+}
+.header-item {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    border-radius: 10px;
+}
+.header-item .icon-search {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+}
+.header-item .icon-search i {
+    line-height: 40px;
+    font-size: 20px;
+}
+.item-drop-box {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.item-drop-box .item-content {
+    display: flex;
+    align-items: center;
+}
+.item-drop-box .item-btn {
+    display: none;
+    padding: 8px 7px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+}
+.item-content .avatar {
+    height: 40px;
+    width: 40px;
+}
+.item-drop-box:hover {
+    background-color: #EAF3FE;
+}
+.item-drop-box:hover .item-btn {
+    display: block;
+}
+.item-btn:hover{
+    background-color: #EAF3FE;
+}
+.friends-list {
+    padding: 10px 0px 10px 10px;
+    height: 430px;
+    overflow-y: scroll;
+}
+.friends-list .item.active {
+    background-color: #EAF3FE;
+}
